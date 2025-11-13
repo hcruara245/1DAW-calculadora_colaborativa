@@ -50,6 +50,14 @@ public class calculadora {
         int resultadoResta = restar(a, b);
         return resultadoSuma - resultadoResta;
     }
+    
+    public static int multiYSuma (int a, int b) {
+        int resultadoMulti = multiplicacion(a, b);
+        int resultadoSuma = sumar(a, b);
+        
+        return resultadoMulti + resultadoSuma;
+    }
+    
     public static void operacion(int a, int b, int operacion){
         switch(operacion){
             case 1:
