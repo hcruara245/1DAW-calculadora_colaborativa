@@ -27,7 +27,11 @@ public class calculadora {
         return a*b;
     }
     public static int division(int a, int b) {
+        if (b==0) {
+            System.out.println("ERROR");
+        }
         return a/b;
+        
     }
     
     public static double potencia(int base, int exponente) {
