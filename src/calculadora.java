@@ -10,7 +10,7 @@ public class calculadora {
         int a = sc.nextInt();
         System.out.print("Dime otro numero: ");
         int b = sc.nextInt();
-        System.out.print("Que quieres hacer?(1-suma, 2-resta, 5-potencia)");
+        System.out.print("Que quieres hacer?(1-suma, 2-resta, 5-potencia, 6-Suma y Resta)");
         int opcion = sc.nextInt();
         operacion(a, b, opcion);
     }
@@ -37,7 +37,12 @@ public class calculadora {
         }
         return resultado;
     }
-    
+
+    public static int sumaYResta(int a, int b){
+        int resultadoSuma = sumar(a, b);
+        int resultadoResta = restar(a, b);
+        return resultadoSuma - resultadoResta;
+    }
     public static void operacion(int a, int b, int operacion){
         switch(operacion){
             case 1:
@@ -49,6 +54,9 @@ public class calculadora {
             case 5:
                 double resultado = potencia(a, b);
                 System.out.println(resultado);
+                break;
+            case 6: 
+                System.out.println(sumaYResta(a, b));
                 break;
         }
     }
