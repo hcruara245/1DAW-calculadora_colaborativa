@@ -23,6 +23,11 @@ public class calculadora {
         return a - b;
     }
     
+    public static int sumaYResta(int a, int b){
+        int resultadoSuma = sumar(a, b);
+        int resultadoResta = restar(a, b);
+        return resultadoSuma - resultadoResta;
+    }
     public static void operacion(int a, int b, int operacion){
         switch(operacion){
             case 1:
